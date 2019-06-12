@@ -1,0 +1,22 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      enabled: true
+      label: master
+      server:
+        git:
+          uri: https://github.com/qinjian0306/spring-cloud-config-repository
+          username:
+          password:
+          basedir: /Users/qinjian/Desktop/redis/btse/cloud/config
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5 # 获取服务列表的周期：5s
+    service-url:
+      defaultZone: http://localhost:9001/eureka
+env:
+  prod       
